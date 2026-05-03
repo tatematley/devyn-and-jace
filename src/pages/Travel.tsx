@@ -32,15 +32,13 @@ export default function Travel() {
       >
         <span className="section-label">Getting Here &amp; Getting Around</span>
         <h1>Travel</h1>
-        <p>Everything you need to plan your trip to Waynesboro, Virginia</p>
       </div>
 
       {/* ── Getting Here ── */}
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">Flying In</span>
-            <h2 className="section-title">Getting Here</h2>
+            <h2 className="section-title">Flying In</h2>
             <div className="ornament"><span>✦</span></div>
           </div>
 
@@ -163,14 +161,9 @@ export default function Travel() {
             fontWeight: 700,
             color: '#B4B534',
           }}>
-            Devyn &nbsp;·&nbsp;
-            <a href="tel:8016570281" style={{ color: 'var(--dark-blue)', textDecoration: 'none' }}>
-              (801) 657-0281
-            </a>
-            &nbsp;&nbsp;·&nbsp;&nbsp;
-            Jace &nbsp;·&nbsp;
-            <a href="tel:8017105196" style={{ color: 'var(--dark-blue)', textDecoration: 'none' }}>
-              (801) 710-5196
+            Tate &nbsp;·&nbsp;
+            <a href="tel:8012004361" style={{ color: 'var(--dark-blue)', textDecoration: 'none' }}>
+              (801) 200-4361
             </a>
           </p>
         </div>

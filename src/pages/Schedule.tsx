@@ -40,6 +40,8 @@ const restaurantsByCity: RestaurantCity[] = [
 interface Event {
   time: string
   name: string
+  cursivePrefix?: string
+  citronName?: boolean
   desc?: string
   address?: string
   highlight?: boolean
@@ -91,15 +93,16 @@ const days: Day[] = [
     date: 'September 18',
     events: [
       {
-        time: 'TBD',
+        time: '2–4 PM',
         name: 'Cyrus Ridge Farm — Visit the Miniature Highland Cows',
         desc: 'Come meet the famous fluffy cows!',
         instagram: 'https://www.instagram.com/cyrusridgefarm/',
         address: '77 Singing Hill Ln, Waynesboro, VA',
       },
       {
-        time: 'Evening',
-        name: 'I Do BBQ',
+        time: '5 PM',
+        name: 'BBQ',
+        cursivePrefix: 'I Do ',
         desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! (Casual attire)",
         address: '1 Entry School Rd. Waynesboro, VA 22980',
         highlight: true,
@@ -124,12 +127,8 @@ const days: Day[] = [
       },
       {
         time: 'Evening',
-        name: "Hors d'Oeuvres, Dinner, Cake & Dancing",
-        desc: '',
-      },
-      {
-        time: 'Night',
-        name: 'Send Off',
+        name: "Hors d'Oeuvres, Dinner, Cake, Dancing & Send Off",
+        citronName: true,
         highlight: true,
       },
     ],
@@ -360,7 +359,7 @@ export default function Schedule() {
       >
         <span className="section-label">Plan Your Visit</span>
         <h1>Schedule</h1>
-        <p>A full weekend of celebration in Waynesboro, Virginia</p>
+        <p>A weekend of celebration in Waynesboro, Virginia</p>
       </div>
 
       {/* Day tabs */}
@@ -399,9 +398,6 @@ export default function Schedule() {
                   {current.noteDetail}
                 </p>
               )}
-              <p className="schedule-explore-hint">
-                Have free time? See activity &amp; dining suggestions below ↓
-              </p>
             </div>
 
             {current.photo && (
@@ -426,7 +422,14 @@ export default function Schedule() {
                         <ExternalLinkIcon />
                       </a>
                     ) : (
-                      <div className="schedule-event-name">{event.name}</div>
+                      <div className="schedule-event-name" style={event.citronName ? { color: '#B4B534' } : undefined}>
+                        {event.cursivePrefix && (
+                          <span style={{ fontFamily: 'var(--font-script)', fontStyle: 'italic', fontSize: '1.15em' }}>
+                            {event.cursivePrefix}
+                          </span>
+                        )}
+                        {event.name}
+                      </div>
                     )}
                     {event.desc && (
                       <div className="schedule-event-desc">{event.desc}</div>
@@ -463,6 +466,9 @@ export default function Schedule() {
                 </li>
               ))}
             </ul>
+            <p className="schedule-explore-hint">
+              Have free time? See activity &amp; dining suggestions below ↓
+            </p>
           </div>
 
         </div>

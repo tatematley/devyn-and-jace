@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import Countdown from '../components/Countdown'
 
 const weekendDays = [
-  { id: 'thursday', date: 'Sep 17', day: 'Thursday', tagline: 'Welcome Weekend',  featured: false },
+  { id: 'thursday', date: 'Sep 17', day: 'Thursday', tagline: '',                  featured: false },
   { id: 'friday',   date: 'Sep 18', day: 'Friday',   tagline: 'Pre-Wedding Day',  featured: false },
-  { id: 'saturday', date: 'Sep 19', day: 'Saturday', tagline: 'The Wedding',       featured: true  },
+  { id: 'saturday', date: 'Sep 19', day: 'Saturday', tagline: 'Wedding Day',       featured: true  },
   { id: 'sunday',   date: 'Sep 20', day: 'Sunday',   tagline: 'Before You Go',    featured: false },
 ]
 
@@ -37,10 +37,7 @@ export default function Home() {
       {/* ── 3. Our Story — full-bleed photo ── */}
       <section className="home-story-feature">
         <div className="home-story-content">
-          <span className="section-label">A Love Story</span>
-          <h2 className="section-title">Our Story</h2>
-          <div className="ornament"><span>✦</span></div>
-          <p>
+          <p style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 700, fontStyle: 'italic', lineHeight: 1.6 }}>
             We can&apos;t wait to celebrate with each of you! Thanks for being part of our journey.
           </p>
           <Link to="/our-story" className="btn btn-light">Read Our Story</Link>

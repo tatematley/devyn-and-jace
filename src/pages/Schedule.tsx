@@ -95,7 +95,7 @@ const days: Day[] = [
       {
         time: '2–4 PM',
         name: 'Cyrus Ridge Farm — Visit the Miniature Highland Cows',
-        desc: 'Come meet the famous fluffy cows!',
+        desc: 'Come meet our cuddly cows!',
         instagram: 'https://www.instagram.com/cyrusridgefarm/',
         address: '77 Singing Hill Ln, Waynesboro, VA',
       },
@@ -127,7 +127,7 @@ const days: Day[] = [
       },
       {
         time: 'Evening',
-        name: "Hors d'Oeuvres, Dinner, Cake, Dancing & Send Off",
+        name: "Hors d'Oeuvres, Dinner, Dancing & Send Off",
         citronName: true,
         highlight: true,
       },
@@ -179,7 +179,7 @@ const activities: Activity[] = [
   {
     name: "Reed's Gap Trail",
     desc: '2.5 miles south on the Appalachian Trail — great panoramic views',
-    url: '#',
+    url: 'https://www.alltrails.com/en-gb/trail/us/virginia/dripping-rock-south-via-appalachian-trail?sh=sh4ykz&utm_medium=trail_share&utm_source=alltrails_virality',
     mapsQuery: "Reed's Gap, Blue Ridge Parkway, VA",
   },
   {
@@ -189,14 +189,8 @@ const activities: Activity[] = [
     mapsQuery: 'Dripping Rock Trail, Waynesboro, VA',
   },
   {
-    name: 'Blackrock Summit',
-    desc: 'Scenic Appalachian Trail summit hike with stunning valley views',
-    url: 'https://www.alltrails.com/en-gb/trail/us/virginia/blackrock-summit-via-trayfoot-mountain-and-appalachian-trail',
-    mapsQuery: 'Blackrock Summit, Shenandoah National Park, VA',
-  },
-  {
-    name: 'Humpback Rocks Loop',
-    desc: 'Popular Appalachian Trail loop with sweeping Blue Ridge views',
+    name: 'Humpback Rock Hike ★',
+    desc: "The bride's favorite! Short but stunning views — not for the faint of heart.",
     url: 'https://www.alltrails.com/en-gb/trail/us/virginia/humpback-rocks-loop-via-the-appalachian-trail',
     mapsQuery: 'Humpback Rocks, Blue Ridge Parkway, VA',
   },
@@ -224,12 +218,6 @@ const activities: Activity[] = [
     desc: 'Beautiful mountain lake — swimming, kayaking, and relaxing',
     url: '#',
     mapsQuery: 'Sherando Lake Recreation Area, VA',
-  },
-  {
-    name: 'Fishing',
-    desc: 'World-class trout streams throughout the Shenandoah Valley',
-    url: '#',
-    mapsQuery: 'South River, Waynesboro, VA',
   },
   {
     name: 'Virginia Safari Park',
@@ -275,14 +263,14 @@ const activities: Activity[] = [
     mapsQuery: 'Highland James Monroe Estate, VA',
   },
   {
-    name: 'Woodrow Wilson Presidential Library',
+    name: 'Woodrow Wilson House',
     desc: "The 28th president's birthplace & museum in downtown Staunton",
     url: 'https://woodrowwilsonhouse.org',
     mapsQuery: 'Woodrow Wilson Presidential Library, Staunton, VA',
   },
   {
     name: 'Virginia Military Institute',
-    desc: 'Free tour with a cadet at noon. 4 PM drills most days. Robert E. Lee Chapel is on the neighboring Washington & Lee campus.',
+    desc: 'Free tour — meet in the basement of the campus chapel museum. 4 PM drills most days. Robert E. Lee Chapel is on the neighboring Washington & Lee campus.',
     url: 'https://www.vmi.edu/',
     mapsQuery: 'Virginia Military Institute, Lexington, VA',
   },
@@ -347,7 +335,7 @@ function AddressLine({ address }: { address: string }) {
 
 export default function Schedule() {
   const location = useLocation()
-  const initialDay = (location.state as { activeDay?: string } | null)?.activeDay ?? 'saturday'
+  const initialDay = (location.state as { activeDay?: string } | null)?.activeDay ?? 'thursday'
   const [activeDay, setActiveDay] = useState(initialDay)
   const current = days.find(d => d.id === activeDay)!
 

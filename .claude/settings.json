@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(mkdir -p /Users/tatematley/devyn-and-jace/public/images)",
+      "Bash(touch /Users/tatematley/devyn-and-jace/public/images/.gitkeep)",
+      "Bash(mkdir -p /Users/tatematley/devyn-and-jace/src/components /Users/tatematley/devyn-and-jace/src/pages)",
+      "Bash(npm run:*)",
+      "Bash(grep -v \"charcoal-light\\\\|charcoal\\)$\")"
+    ]
+  }
+}

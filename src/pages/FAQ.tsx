@@ -9,7 +9,7 @@ const faqs: FAQItem[] = [
   {
     question: "What is the dress code?",
     answer:
-      "We would love to see our family and friends in formal attire! Men typically wear a suit or a blazer with dress pants and dress shoes, while women can choose from cocktail dresses, midi dresses, jumpsuits, or tailored pantsuits. Since all events are outdoors, we also recommend opting for block heels or flats, as the celebration will take place on grass.",
+      "We would love to see our family and friends in semi-formal attire! Men wearing a suit or a blazer with dress pants and dress shoes, ties optional. Women in cocktail dresses, midi dresses, jumpsuits, or tailored pantsuits. Since all events are outdoors, we also recommend opting for block heels or flats, as the celebration will take place on grass.",
   },
   {
     question: "When should I RSVP by?",

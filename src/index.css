@@ -1232,6 +1232,7 @@ a.schedule-event-name:hover {
   color: var(--dark-blue);
   margin-top: 20px;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .schedule-day-photo {
@@ -1322,6 +1323,24 @@ a.schedule-event-name:hover {
 }
 
 /* Where to Stay card */
+.hotel-link {
+  color: var(--charcoal);
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.hotel-link:hover {
+  color: var(--dark-blue);
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  text-align: left;
+}
+
 .stay-card {
   background: var(--light-blue);
   padding: 56px 72px;
@@ -2577,6 +2596,17 @@ a.schedule-event-name:hover {
   .weekend-grid {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+  }
+
+  /* Hotel grid → single column */
+  .hotel-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Stay card text-align left on mobile */
+  .stay-card {
+    text-align: left;
   }
 
   /* Activities → single column */

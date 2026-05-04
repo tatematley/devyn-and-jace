@@ -70,11 +70,50 @@ export default function Travel() {
               All wedding activities take place within 10 minutes of{' '}
               <strong style={{ color: 'var(--charcoal-light)' }}>388 Rockfish Rd, Waynesboro, VA 22980</strong>.
             </p>
-            <p style={{ fontSize: '17px', lineHeight: 1.85, color: 'var(--warm-gray)' }}>
+            <p style={{ fontSize: '17px', lineHeight: 1.85, marginBottom: '24px', color: 'var(--warm-gray)' }}>
               We recommend searching <strong style={{ color: 'var(--charcoal-light)' }}>Airbnb</strong>,{' '}
               <strong style={{ color: 'var(--charcoal-light)' }}>Vrbo</strong>, or local hotels
-              in Waynesboro and Staunton.
+              in Waynesboro, Staunton, Charlottesville, or surrounding areas.
             </p>
+            <div className="hotel-grid" style={{ marginTop: '8px' }}>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: '#B4B534', marginBottom: '12px' }}>Waynesboro &amp; Staunton</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {[
+                    { name: 'Hampton Inn Waynesboro', url: 'https://maps.app.goo.gl/eKs6VXB8XHh1Zq8E6' },
+                    { name: 'Holiday Inn Express & Suites Waynesboro', url: 'https://maps.app.goo.gl/8weamUpfBpTy3zh69' },
+                    { name: 'Grey Pine Lodge', url: 'https://maps.app.goo.gl/dJ2qqPAq9FMXnVLT9' },
+                    { name: 'Fairfield by Marriott — Staunton', url: 'https://maps.app.goo.gl/fB5PcAvon2NrfFe2A' },
+                    { name: 'Berkeley House Bed & Breakfast', url: 'https://maps.app.goo.gl/i8ptqktWi4zRPGSTA' },
+                    { name: 'The Historic Inn at Oakdene', url: 'https://maps.app.goo.gl/QRPXgviMkCbMWnJN9' },
+                  ].map(({ name, url }) => (
+                    <li key={name}>
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="hotel-link">
+                        {name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: '#B4B534', marginBottom: '12px' }}>Charlottesville</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {[
+                    { name: 'The Doyle Hotel', url: 'https://us1.cloudbeds.com/en/reservation/4yxBsz/' },
+                    { name: 'DoubleTree by Hilton', url: 'https://www.guestreservations.com/doubletree-by-hilton-hotel-charlottesville/booking' },
+                    { name: 'The Draftsman Hotel (Marriott)', url: 'https://www.marriott.com/reservation/rateListMenu.mi' },
+                    { name: 'Piedmont Place Suites', url: 'https://www.vaguesthouses.com/piedmont-place-suites' },
+                    { name: 'Home in Batesville (Airbnb)', url: 'https://www.airbnb.com/rooms/699194027975013505' },
+                  ].map(({ name, url }) => (
+                    <li key={name}>
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="hotel-link">
+                        {name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -130,44 +169,6 @@ export default function Travel() {
         </div>
       </section>
 
-      {/* ── Questions ── */}
-      <section className="section" style={{ textAlign: 'center' }}>
-        <div className="closing-card" style={{
-          background: '#F7F8E8',
-          maxWidth: '640px',
-          margin: '0 auto',
-          padding: '64px 56px',
-          boxShadow: '0 4px 32px rgba(0,0,0,0.07)',
-        }}>
-          <span className="section-label" style={{ color: '#B4B534' }}>Need Help?</span>
-          <h2 className="section-title" style={{ color: '#B4B534', fontWeight: 700 }}>Questions?</h2>
-          <div className="ornament"><span style={{ color: '#B4B534' }}>✦</span></div>
-          <p style={{
-            fontFamily: 'var(--font-serif)',
-            fontSize: '21px',
-            fontWeight: 700,
-            color: '#B4B534',
-            fontStyle: 'italic',
-            lineHeight: 1.9,
-            marginTop: '24px',
-            marginBottom: '24px',
-          }}>
-            Don&apos;t hesitate to reach out — we want your trip to be as
-            seamless and enjoyable as possible.
-          </p>
-          <p style={{
-            fontFamily: 'var(--font-sans)',
-            fontSize: '18px',
-            fontWeight: 700,
-            color: '#B4B534',
-          }}>
-            Tate &nbsp;·&nbsp;
-            <a href="tel:8012004361" style={{ color: 'var(--dark-blue)', textDecoration: 'none' }}>
-              (801) 200-4361
-            </a>
-          </p>
-        </div>
-      </section>
 
     </div>
   )

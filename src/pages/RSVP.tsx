@@ -356,6 +356,39 @@ export default function RSVP() {
           </form>
         </div>
       </section>
+
+      {/* ── Questions ── */}
+      <section className="section" style={{ textAlign: 'center' }}>
+        <div className="closing-card" style={{
+          background: '#F7F8E8',
+          maxWidth: '640px',
+          margin: '0 auto',
+          padding: '64px 56px',
+          boxShadow: '0 4px 32px rgba(0,0,0,0.07)',
+        }}>
+          <span className="section-label" style={{ color: '#B4B534' }}>Need Help?</span>
+          <h2 className="section-title" style={{ color: '#B4B534', fontWeight: 700 }}>Questions?</h2>
+          <div className="ornament"><span style={{ color: '#B4B534' }}>✦</span></div>
+          <p style={{
+            fontFamily: 'var(--font-serif)',
+            fontSize: '21px',
+            fontWeight: 700,
+            color: '#B4B534',
+            fontStyle: 'italic',
+            lineHeight: 1.9,
+            marginTop: '24px',
+            marginBottom: '24px',
+          }}>
+            Don&apos;t hesitate to reach out — we&apos;re happy to help with anything you need.
+          </p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '18px', fontWeight: 700, color: '#B4B534' }}>
+            Tate Matley &nbsp;·&nbsp;
+            <a href="tel:8012004361" style={{ color: 'var(--dark-blue)', textDecoration: 'none' }}>
+              (801) 200-4361
+            </a>
+          </p>
+        </div>
+      </section>
     </div>
   )
 }

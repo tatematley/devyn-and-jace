@@ -89,8 +89,7 @@ export default function Home() {
       {/* ── 5. Weekend Preview ── */}
       <section className="section" style={{ textAlign: 'center' }}>
         <div className="container">
-          <span className="section-label">Join Us for a Full Weekend</span>
-          <h2 className="section-title">A Weekend to Remember</h2>
+          <h2 className="section-title">Join Us for a Weekend to Remember</h2>
           <div className="ornament"><span>✦</span></div>
 
           <div className="weekend-grid">

@@ -142,7 +142,7 @@ const days: Day[] = [
     optional: true,
     events: [
       {
-        time: 'Afternoon',
+        time: '12 PM',
         name: 'Polo Match',
         desc: 'A quintessentially Virginia Sunday at King Family Vineyards in Crozet',
         url: 'https://www.kingfamilyvineyards.com/polo',

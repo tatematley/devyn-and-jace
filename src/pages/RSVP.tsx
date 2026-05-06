@@ -366,7 +366,6 @@ export default function RSVP() {
           padding: '64px 56px',
           boxShadow: '0 4px 32px rgba(0,0,0,0.07)',
         }}>
-          <span className="section-label" style={{ color: '#B4B534' }}>Need Help?</span>
           <h2 className="section-title" style={{ color: '#B4B534', fontWeight: 700 }}>Questions?</h2>
           <div className="ornament"><span style={{ color: '#B4B534' }}>✦</span></div>
           <p style={{

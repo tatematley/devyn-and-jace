@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 interface Restaurant { name: string; url?: string }
@@ -103,7 +103,7 @@ const days: Day[] = [
         time: '5 PM',
         name: 'BBQ',
         cursivePrefix: 'I Do ',
-        desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! (Casual attire)",
+        desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! (Casual attire) — It's a long driveway, head all the way up!",
         address: '1 Entry School Rd. Waynesboro, VA 22980',
         highlight: true,
       },
@@ -189,14 +189,8 @@ const activities: Activity[] = [
     mapsQuery: 'Dripping Rock Trail, Waynesboro, VA',
   },
   {
-    name: 'Humpback Rock Hike ★',
-    desc: "The bride's favorite! Short but stunning views — not for the faint of heart.",
-    url: 'https://www.alltrails.com/en-gb/trail/us/virginia/humpback-rocks-loop-via-the-appalachian-trail',
-    mapsQuery: 'Humpback Rocks, Blue Ridge Parkway, VA',
-  },
-  {
-    name: 'Humpback Rocks Recreation Area',
-    desc: 'Short scenic trail to iconic rock formation on the Blue Ridge Parkway',
+    name: 'Humpback Rocks Recreation Area ★',
+    desc: "The bride's favorite! Stunning views — only 1.8 miles but a good climb. Not for the faint of heart.",
     url: 'https://www.alltrails.com/en-gb/trail/us/virginia/humpback-rocks-recreation-area',
     mapsQuery: 'Humpback Rocks Recreation Area, VA',
   },
@@ -215,7 +209,7 @@ const activities: Activity[] = [
   },
   {
     name: 'Sherando Lake',
-    desc: 'Beautiful mountain lake — swimming, kayaking, and relaxing',
+    desc: 'Beautiful mountain lake — swimming, kayaking, and relaxing. $10 cash park entrance.',
     url: '#',
     mapsQuery: 'Sherando Lake Recreation Area, VA',
   },
@@ -270,7 +264,7 @@ const activities: Activity[] = [
   },
   {
     name: 'Virginia Military Institute',
-    desc: 'Free tour — meet in the basement of the campus chapel museum. 4 PM drills most days. Robert E. Lee Chapel is on the neighboring Washington & Lee campus.',
+    desc: 'Free tour at noon — meet in the basement of the campus chapel museum. 4 PM drills most days. Robert E. Lee Chapel is on the neighboring Washington & Lee campus.',
     url: 'https://www.vmi.edu/',
     mapsQuery: 'Virginia Military Institute, Lexington, VA',
   },
@@ -335,8 +329,14 @@ function AddressLine({ address }: { address: string }) {
 
 export default function Schedule() {
   const location = useLocation()
-  const initialDay = (location.state as { activeDay?: string } | null)?.activeDay ?? 'thursday'
-  const [activeDay, setActiveDay] = useState(initialDay)
+  const [activeDay, setActiveDay] = useState<string>(
+    (location.state as { activeDay?: string } | null)?.activeDay ?? 'thursday'
+  )
+
+  useEffect(() => {
+    const stateDay = (location.state as { activeDay?: string } | null)?.activeDay
+    setActiveDay(stateDay ?? 'thursday')
+  }, [location.key])
   const current = days.find(d => d.id === activeDay)!
 
   return (

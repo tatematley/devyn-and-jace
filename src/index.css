@@ -1908,8 +1908,8 @@ a.schedule-event-name:hover {
 
 .ss-option:hover,
 .ss-option.highlighted {
-  background: var(--cream);
-  color: var(--gold-dark);
+  background: #EAF2D0;
+  color: var(--charcoal);
 }
 
 .ss-empty {

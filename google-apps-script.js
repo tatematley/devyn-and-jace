@@ -64,13 +64,10 @@ function doPost(e) {
         'Name',
         'Mailing Address',
         'Attending',
-        'Number of Guests',
-        'Meal Preference',
-        'Dietary Restrictions',
         'Song Request',
         'Note',
       ]);
-      sheet.getRange(1, 1, 1, 9).setFontWeight('bold');
+      sheet.getRange(1, 1, 1, 6).setFontWeight('bold');
     }
 
     sheet.appendRow([
@@ -78,9 +75,6 @@ function doPost(e) {
       data.name           || '',
       data.mailingAddress || '',
       data.attending      === 'yes' ? 'Attending' : 'Not Attending',
-      data.guests         || '',
-      data.meal           || '',
-      data.dietary        || '',
       data.song           || '',
       data.note           || '',
     ]);

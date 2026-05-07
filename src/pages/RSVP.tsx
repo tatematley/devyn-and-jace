@@ -121,9 +121,6 @@ interface FormData {
   names: string[]
   mailingAddress: string
   attending: string
-  guests: string
-  meal: string
-  dietary: string
   song: string
   note: string
 }
@@ -132,9 +129,6 @@ const defaultForm: FormData = {
   names: [],
   mailingAddress: '',
   attending: '',
-  guests: '1',
-  meal: '',
-  dietary: '',
   song: '',
   note: '',
 }
@@ -249,6 +243,9 @@ export default function RSVP() {
             {/* ── Guest names — multi-select ── */}
             <div className="form-group">
               <label className="form-label">Select All Guests in Your Party</label>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'var(--warm-gray)', marginBottom: '8px', fontStyle: 'italic' }}>
+                Only names on this list are invited. If you have questions about your invitation, please reach out to us directly.
+              </p>
               {loadingGuests ? (
                 <div className="form-input" style={{ color: 'var(--warm-gray)', fontStyle: 'italic' }}>
                   Loading guest list…
@@ -305,36 +302,10 @@ export default function RSVP() {
             </div>
 
             {form.attending === 'yes' && (
-              <>
-                <div className="form-group">
-                  <label className="form-label" htmlFor="guests">Total guests attending (including yourself)</label>
-                  <select id="guests" name="guests" className="form-select" value={form.guests} onChange={handleChange}>
-                    {[1, 2, 3, 4].map(n => <option key={n} value={String(n)}>{n}</option>)}
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label className="form-label" htmlFor="meal">Meal Preference</label>
-                  <select id="meal" name="meal" className="form-select" value={form.meal} onChange={handleChange}>
-                    <option value="" disabled>Select a preference</option>
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Fish">Fish</option>
-                    <option value="Vegetarian">Vegetarian</option>
-                    <option value="Vegan">Vegan</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label className="form-label" htmlFor="dietary">Dietary Restrictions or Allergies</label>
-                  <input id="dietary" name="dietary" type="text" className="form-input" value={form.dietary} onChange={handleChange} placeholder="None? Leave blank" />
-                </div>
-
-                <div className="form-group">
-                  <label className="form-label" htmlFor="song">Song Request</label>
-                  <input id="song" name="song" type="text" className="form-input" value={form.song} onChange={handleChange} placeholder="What song will get you on the dance floor?" />
-                </div>
-              </>
+              <div className="form-group">
+                <label className="form-label" htmlFor="song">Song Request</label>
+                <input id="song" name="song" type="text" className="form-input" value={form.song} onChange={handleChange} placeholder="What song will get you on the dance floor?" />
+              </div>
             )}
 
             <div className="form-group">

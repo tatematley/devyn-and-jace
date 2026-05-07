@@ -243,7 +243,7 @@ export default function RSVP() {
             <div className="form-group">
               <label className="form-label">Select All Guests in Your Party</label>
               <p style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'var(--warm-gray)', marginBottom: '8px', fontStyle: 'italic' }}>
-                Attendance is limited to those named on the invitation. Please contact us directly with any questions regarding your invitation.
+                Attendance at the Virginia celebration is limited to the guests named in the dropdown list below. Please contact us directly with any questions regarding your invitation.
               </p>
               {loadingGuests ? (
                 <div className="form-input" style={{ color: 'var(--warm-gray)', fontStyle: 'italic' }}>

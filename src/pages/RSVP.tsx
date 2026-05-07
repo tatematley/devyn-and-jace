@@ -25,10 +25,9 @@ function MultiSelectGuests({ options, selected, onChange }: MultiSelectGuestsPro
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
-  const available = options.filter(o => !selected.includes(o))
   const filtered = query.length > 0
-    ? available.filter(o => o.toLowerCase().includes(query.toLowerCase()))
-    : available
+    ? options.filter(o => !selected.includes(o) && o.toLowerCase().includes(query.toLowerCase()))
+    : []
 
   const add = (name: string) => {
     onChange([...selected, name])

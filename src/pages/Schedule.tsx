@@ -191,6 +191,12 @@ const activities: Activity[] = [
     mapsQuery: 'Dripping Rock Trail, Waynesboro, VA',
   },
   {
+    name: 'Blackrock Summit',
+    desc: 'Scenic Appalachian Trail summit hike with stunning valley views',
+    url: 'https://www.alltrails.com/en-gb/trail/us/virginia/blackrock-summit-via-trayfoot-mountain-and-appalachian-trail?sh=sh4ykz&utm_medium=trail_share&utm_source=alltrails_virality',
+    mapsQuery: 'Blackrock Summit, Shenandoah National Park, VA',
+  },
+  {
     name: 'Humpback Rocks Recreation Area ★',
     desc: "The bride's favorite! Stunning views — only 1.8 miles but a good climb. Not for the faint of heart.",
     url: 'https://www.alltrails.com/en-gb/trail/us/virginia/humpback-rocks-recreation-area',

@@ -62,7 +62,7 @@ function doPost(e) {
       sheet.appendRow([
         'Timestamp',
         'Name',
-        'Email',
+        'Mailing Address',
         'Attending',
         'Number of Guests',
         'Meal Preference',
@@ -75,14 +75,14 @@ function doPost(e) {
 
     sheet.appendRow([
       new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }),
-      data.name       || '',
-      data.email      || '',
-      data.attending  === 'yes' ? 'Attending' : 'Not Attending',
-      data.guests     || '',
-      data.meal       || '',
-      data.dietary    || '',
-      data.song       || '',
-      data.note       || '',
+      data.name           || '',
+      data.mailingAddress || '',
+      data.attending      === 'yes' ? 'Attending' : 'Not Attending',
+      data.guests         || '',
+      data.meal           || '',
+      data.dietary        || '',
+      data.song           || '',
+      data.note           || '',
     ]);
 
     return ContentService

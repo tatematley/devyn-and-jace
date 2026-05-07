@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 interface Restaurant { name: string; url?: string }
 interface RestaurantCity { city: string; places: Restaurant[] }
@@ -43,6 +43,7 @@ interface Event {
   cursivePrefix?: string
   citronName?: boolean
   desc?: string
+  faqNote?: boolean
   address?: string
   highlight?: boolean
   url?: string
@@ -121,6 +122,7 @@ const days: Day[] = [
         time: '4:30 PM',
         name: 'Ceremony',
         desc: 'Please arrive at 4:30 PM. The ceremony will begin promptly at 4:45 PM.',
+        faqNote: true,
         address: '388 Rockfish Rd. Waynesboro, VA 22980',
         parkingImg: '/images/Parking.JPEG',
         highlight: true,
@@ -421,6 +423,11 @@ export default function Schedule() {
                     )}
                     {event.desc && (
                       <div className="schedule-event-desc">{event.desc}</div>
+                    )}
+                    {event.faqNote && (
+                      <div className="schedule-event-desc" style={{ marginTop: '4px' }}>
+                        See <Link to="/faq" style={{ color: 'var(--dark-blue)', textDecoration: 'underline' }}>FAQ</Link> for more details
+                      </div>
                     )}
                     {event.instagram && (
                       <a href={event.instagram} target="_blank" rel="noopener noreferrer" className="schedule-address" style={{ marginTop: '6px' }}>

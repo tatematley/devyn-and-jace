@@ -426,7 +426,7 @@ export default function Schedule() {
                     )}
                     {event.faqNote && (
                       <div className="schedule-event-desc" style={{ marginTop: '4px' }}>
-                        See <Link to="/faq" style={{ color: 'var(--dark-blue)', textDecoration: 'underline' }}>FAQ</Link> for more details
+                        See <Link to="/faq" style={{ color: 'var(--dark-blue)', textDecoration: 'underline' }}>FAQ</Link> for dress code and more details
                       </div>
                     )}
                     {event.instagram && (

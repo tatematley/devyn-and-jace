@@ -286,7 +286,7 @@ export default function RSVP() {
                 className="form-input"
                 value={form.mailingAddress} onChange={handleChange}
                 required autoComplete="street-address"
-                placeholder="Street, City, State, Zip"
+                placeholder="Full mailing address (Street, City, State, Zip)"
               />
             </div>
 

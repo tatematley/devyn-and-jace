@@ -77,7 +77,7 @@ const days: Day[] = [
     date: 'September 17',
     optional: true,
     note: 'For those arriving early, we would love you to join us at Carter Mountain Orchard.',
-    noteBody: 'Carter Mountain is located between the Charlottesville airport and Waynesboro — a perfect first stop on your way in to town!\n\nNo group plan here, since it\'s open to the public, but there\'s a good chance you\'ll run into fellow guests soaking up the same view. Come if you can, no pressure either way!',
+    noteBody: 'Carter Mountain is located between the Charlottesville airport and Waynesboro — a perfect first stop on your way in to town! No group plan here, since it\'s open to the public, but there\'s a good chance you\'ll run into fellow guests soaking up the same view. Come if you can, no pressure either way!',
     noteBullets: [
       '$10/person entrance',
       'Grab tickets in advance — it fills up fast on nice days',
@@ -397,26 +397,24 @@ export default function Schedule() {
                 )}
               </div>
               {current.note && (
-                <p className="schedule-day-note" style={{ fontWeight: 700 }}>{current.note}</p>
+                <p className="schedule-day-note" style={{ fontWeight: 700, fontSize: '18px' }}>{current.note}</p>
               )}
               {current.noteDetail && (
-                <p className="schedule-day-note" style={{ marginTop: '8px', fontSize: '15px' }}>
+                <p className="schedule-day-note" style={{ marginTop: '8px', fontSize: '17px' }}>
                   {current.noteDetail}
                 </p>
               )}
-              {current.noteBody && current.noteBody.split('\n\n').map((para, i) => (
-                <p key={i} className="schedule-day-note" style={{ marginTop: '10px', fontSize: '17px' }}>{para}</p>
-              ))}
+              {current.noteBody && (
+                <p className="schedule-day-note" style={{ marginTop: '10px', fontSize: '18px' }}>{current.noteBody}</p>
+              )}
               {current.noteBullets && (
                 <div style={{ marginTop: '10px' }}>
                   <p className="schedule-day-note" style={{ fontSize: '15px', fontWeight: 700, marginBottom: '4px' }}>Things to note:</p>
-                  {current.noteBullets.map((b, i) => (
-                    <p key={i} className="schedule-day-note" style={{ fontSize: '15px', marginTop: '2px' }}>{b}</p>
-                  ))}
+                  <p className="schedule-day-note" style={{ fontSize: '15px' }}>{current.noteBullets.join(', ')}</p>
                 </div>
               )}
               {current.noteFooter && (
-                <p className="schedule-day-note" style={{ marginTop: '10px', fontSize: '15px', fontStyle: 'italic' }}>
+                <p className="schedule-day-note" style={{ marginTop: '10px', fontSize: '16px', fontStyle: 'italic' }}>
                   {current.noteFooter}
                 </p>
               )}

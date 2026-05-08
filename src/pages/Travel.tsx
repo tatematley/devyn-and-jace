@@ -86,6 +86,8 @@ export default function Travel() {
                     { name: 'Fairfield by Marriott — Staunton', url: 'https://maps.app.goo.gl/fB5PcAvon2NrfFe2A' },
                     { name: 'Berkeley House Bed & Breakfast', url: 'https://maps.app.goo.gl/i8ptqktWi4zRPGSTA' },
                     { name: 'The Historic Inn at Oakdene', url: 'https://maps.app.goo.gl/QRPXgviMkCbMWnJN9' },
+                    { name: 'Hotel 24 South', url: 'https://share.google/cYXpClR7igmBlYL4g' },
+                    { name: 'The Blackburn Inn', url: 'https://www.blackburn-inn.com/blog/the-blackburn-inn-a-hotel-with-history' },
                   ].map(({ name, url }) => (
                     <li key={name}>
                       <a href={url} target="_blank" rel="noopener noreferrer" className="hotel-link">

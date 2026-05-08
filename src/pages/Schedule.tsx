@@ -61,6 +61,9 @@ interface Day {
   tagline?: string
   note?: string
   noteDetail?: string
+  noteBody?: string
+  noteBullets?: string[]
+  noteFooter?: string
   photo?: string
   events: Event[]
 }
@@ -73,8 +76,16 @@ const days: Day[] = [
     scriptName: 'Thursday',
     date: 'September 17',
     optional: true,
-    note: 'For those arriving early enough, we would love you to join us at Carter Mountain Orchard.',
-    noteDetail: 'Carter Mountain is conveniently located between the Charlottesville airport and Waynesboro — a perfect first stop on your way in.',
+    note: 'For those arriving early, we would love you to join us at Carter Mountain Orchard.',
+    noteDetail: 'Carter Mountain is conveniently located between the Charlottesville airport and Waynesboro — a perfect first stop on your way in to town.',
+    noteBody: 'Carter Mountain Orchard is a Charlottesville summer staple and a great way to spend a Thursday evening.\n\nNo group plan here since it\'s open to the public, but there\'s a good chance you\'ll run into fellow guests soaking up the same view. Come if you can, no pressure either way!',
+    noteBullets: [
+      '$10/person entrance',
+      'Grab tickets in advance — it fills up fast on nice days',
+      'Food trucks on site',
+      'Fruit picking available (pricing on their website, or pay on arrival)',
+    ],
+    noteFooter: 'We\'re hoping to make it ourselves, wedding prep permitting!',
     photo: '/images/CarterMountain.jpeg',
     events: [
       {
@@ -392,6 +403,21 @@ export default function Schedule() {
               {current.noteDetail && (
                 <p className="schedule-day-note" style={{ marginTop: '8px', fontSize: '15px' }}>
                   {current.noteDetail}
+                </p>
+              )}
+              {current.noteBody && current.noteBody.split('\n\n').map((para, i) => (
+                <p key={i} className="schedule-day-note" style={{ marginTop: '12px', fontSize: '15px' }}>{para}</p>
+              ))}
+              {current.noteBullets && (
+                <ul style={{ marginTop: '12px', paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  {current.noteBullets.map((b, i) => (
+                    <li key={i} className="schedule-day-note" style={{ fontSize: '15px', listStyleType: 'disc' }}>{b}</li>
+                  ))}
+                </ul>
+              )}
+              {current.noteFooter && (
+                <p className="schedule-day-note" style={{ marginTop: '12px', fontSize: '15px', fontStyle: 'italic' }}>
+                  {current.noteFooter}
                 </p>
               )}
             </div>

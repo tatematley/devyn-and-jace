@@ -118,7 +118,10 @@ function MultiSelectGuests({ options, selected, onChange }: MultiSelectGuestsPro
 // ── Form ─────────────────────────────────────────────────────
 interface FormData {
   names: string[]
-  mailingAddress: string
+  street: string
+  city: string
+  state: string
+  zip: string
   attending: string
   song: string
   note: string
@@ -126,7 +129,10 @@ interface FormData {
 
 const defaultForm: FormData = {
   names: [],
-  mailingAddress: '',
+  street: '',
+  city: '',
+  state: '',
+  zip: '',
   attending: '',
   song: '',
   note: '',
@@ -168,8 +174,10 @@ export default function RSVP() {
     setSubmitting(true)
     setSubmitError('')
 
-    // Send names as a comma-separated string to the spreadsheet
-    const payload = { ...form, name: form.names.join(', ') }
+    const payload = {
+      ...form,
+      name: form.names.join(', '),
+    }
 
     try {
       await fetch(SCRIPT_URL, {
@@ -280,14 +288,39 @@ export default function RSVP() {
 
             {/* ── Mailing Address ── */}
             <div className="form-group">
-              <label className="form-label" htmlFor="mailingAddress">Mailing Address <span style={{ fontWeight: 500, fontStyle: 'italic', color: 'var(--warm-gray)' }}>— we&apos;ll send your formal invitation here</span></label>
+              <label className="form-label">Mailing Address <span style={{ fontWeight: 500, fontStyle: 'italic', color: 'var(--warm-gray)' }}>— we&apos;ll send your formal invitation here</span></label>
               <input
-                id="mailingAddress" name="mailingAddress" type="text"
-                className="form-input"
-                value={form.mailingAddress} onChange={handleChange}
+                id="street" name="street" type="text"
+                className="form-input" style={{ marginBottom: '8px' }}
+                value={form.street} onChange={handleChange}
                 required autoComplete="street-address"
-                placeholder="Full mailing address (Street, City, State, Zip)"
+                placeholder="Street address"
               />
+              <div className="form-row" style={{ gap: '8px' }}>
+                <input
+                  id="city" name="city" type="text"
+                  className="form-input"
+                  value={form.city} onChange={handleChange}
+                  required autoComplete="address-level2"
+                  placeholder="City"
+                />
+                <input
+                  id="state" name="state" type="text"
+                  className="form-input"
+                  value={form.state} onChange={handleChange}
+                  required autoComplete="address-level1"
+                  placeholder="State"
+                  style={{ maxWidth: '100px' }}
+                />
+                <input
+                  id="zip" name="zip" type="text"
+                  className="form-input"
+                  value={form.zip} onChange={handleChange}
+                  required autoComplete="postal-code"
+                  placeholder="Zip"
+                  style={{ maxWidth: '100px' }}
+                />
+              </div>
             </div>
 
             {/* ── Attending ── */}

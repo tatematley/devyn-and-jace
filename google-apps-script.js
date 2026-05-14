@@ -62,21 +62,27 @@ function doPost(e) {
       sheet.appendRow([
         'Timestamp',
         'Name',
-        'Mailing Address',
+        'Street Address',
+        'City',
+        'State',
+        'Zip',
         'Attending',
         'Song Request',
         'Note',
       ]);
-      sheet.getRange(1, 1, 1, 6).setFontWeight('bold');
+      sheet.getRange(1, 1, 1, 9).setFontWeight('bold');
     }
 
     sheet.appendRow([
       new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }),
-      data.name           || '',
-      data.mailingAddress || '',
-      data.attending      === 'yes' ? 'Attending' : 'Not Attending',
-      data.song           || '',
-      data.note           || '',
+      data.name      || '',
+      data.street    || '',
+      data.city      || '',
+      data.state     || '',
+      data.zip       || '',
+      data.attending === 'yes' ? 'Attending' : 'Not Attending',
+      data.song      || '',
+      data.note      || '',
     ]);
 
     return ContentService

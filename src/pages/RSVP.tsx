@@ -304,14 +304,18 @@ export default function RSVP() {
                   required autoComplete="address-level2"
                   placeholder="City"
                 />
-                <input
-                  id="state" name="state" type="text"
-                  className="form-input"
+                <select
+                  id="state" name="state"
+                  className="form-select"
                   value={form.state} onChange={handleChange}
-                  required autoComplete="address-level1"
-                  placeholder="State"
-                  style={{ maxWidth: '100px' }}
-                />
+                  required
+                  style={{ maxWidth: '110px' }}
+                >
+                  <option value="" disabled>State</option>
+                  {['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'].map(s => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
                 <input
                   id="zip" name="zip" type="text"
                   className="form-input"

@@ -67,10 +67,11 @@ function doPost(e) {
         'State',
         'Zip',
         'Attending',
+        'Friday BBQ',
         'Song Request',
         'Note',
       ]);
-      sheet.getRange(1, 1, 1, 9).setFontWeight('bold');
+      sheet.getRange(1, 1, 1, 10).setFontWeight('bold');
     }
 
     sheet.appendRow([
@@ -81,6 +82,7 @@ function doPost(e) {
       data.state     || '',
       data.zip       || '',
       data.attending === 'yes' ? 'Attending' : 'Not Attending',
+      data.fridayBBQ ? 'Yes' : 'No',
       data.song      || '',
       data.note      || '',
     ]);

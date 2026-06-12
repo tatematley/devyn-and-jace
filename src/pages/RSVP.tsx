@@ -123,6 +123,7 @@ interface FormData {
   state: string
   zip: string
   attending: string
+  fridayBBQ: boolean
   song: string
   note: string
 }
@@ -134,6 +135,7 @@ const defaultForm: FormData = {
   state: '',
   zip: '',
   attending: '',
+  fridayBBQ: false,
   song: '',
   note: '',
 }
@@ -338,10 +340,26 @@ export default function RSVP() {
             </div>
 
             {form.attending === 'yes' && (
-              <div className="form-group">
-                <label className="form-label" htmlFor="song">Song Request</label>
-                <input id="song" name="song" type="text" className="form-input" value={form.song} onChange={handleChange} placeholder="What song will get you on the dance floor?" />
-              </div>
+              <>
+                <div className="form-group">
+                  <label className="form-label">Friday, September 18th</label>
+                  <label style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: '15px', color: 'var(--charcoal)', lineHeight: 1.5 }}>
+                    <input
+                      type="checkbox"
+                      name="fridayBBQ"
+                      checked={form.fridayBBQ}
+                      onChange={e => setForm(prev => ({ ...prev, fridayBBQ: e.target.checked }))}
+                      style={{ marginTop: '3px', accentColor: 'var(--dark-blue)', width: '16px', height: '16px', flexShrink: 0 }}
+                    />
+                    I will be attending the <em style={{ margin: '0 2px' }}>I Do BBQ</em> on Friday, September 18th
+                  </label>
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label" htmlFor="song">Song Request</label>
+                  <input id="song" name="song" type="text" className="form-input" value={form.song} onChange={handleChange} placeholder="What song will get you on the dance floor?" />
+                </div>
+              </>
             )}
 
             <div className="form-group">

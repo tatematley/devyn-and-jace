@@ -1,15 +1,22 @@
 import { useState } from 'react'
+import type { ReactNode } from 'react'
 
 interface FAQItem {
   question: string
-  answer: string
+  answer: ReactNode
 }
 
 const faqs: FAQItem[] = [
   {
     question: "What is the dress code?",
-    answer:
-      "We would love to see our family and friends in garden cocktail attire! Men wearing a suit or a blazer with dress pants and dress shoes, ties optional. Women in cocktail dresses, midi dresses, jumpsuits, or tailored pantsuits. Since all events are outdoors, we also recommend opting for block heels or flats, as the celebration will take place on grass. Think of it as an opportunity to dress up—fun & fancy!!",
+    answer: (
+      <div>
+        <p style={{ fontWeight: 700, marginBottom: '10px' }}>Garden Party Formal</p>
+        <p style={{ marginBottom: '10px' }}>Dress to impress!! We would love to see our family and friends in elevated, dressy attire.</p>
+        <p style={{ marginBottom: '10px' }}>Men wearing a suit or a blazer with dress pants and dress shoes, ties optional. Women in cocktail dresses, midi dresses, or tailored pantsuits. Since all events are outdoors, we also recommend opting for block heels or flats, as the celebration will take place on grass.</p>
+        <p>Think of it as an opportunity to dress up—fun &amp; fancy!!</p>
+      </div>
+    ),
   },
   {
     question: "When should I RSVP by?",

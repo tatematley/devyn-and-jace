@@ -455,9 +455,14 @@ export default function Schedule() {
                       <div className="schedule-event-desc">{event.desc}</div>
                     )}
                     {event.faqNote && (
-                      <div className="schedule-event-desc" style={{ marginTop: '4px' }}>
-                        See <Link to="/faq" style={{ color: 'var(--dark-blue)', textDecoration: 'underline' }}>FAQ</Link> for dress code and more details
-                      </div>
+                      <>
+                        <div className="schedule-event-desc" style={{ marginTop: '4px' }}>
+                          Dress Code: Garden Party Formal
+                        </div>
+                        <div className="schedule-event-desc" style={{ marginTop: '4px' }}>
+                          See <Link to="/faq" style={{ color: 'var(--dark-blue)', textDecoration: 'underline' }}>FAQ</Link> for dress code details
+                        </div>
+                      </>
                     )}
                     {event.instagram && (
                       <a href={event.instagram} target="_blank" rel="noopener noreferrer" className="schedule-address" style={{ marginTop: '6px' }}>

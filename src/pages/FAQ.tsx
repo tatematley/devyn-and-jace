@@ -13,7 +13,7 @@ const faqs: FAQItem[] = [
       <div>
         <p style={{ fontWeight: 700, marginBottom: '10px' }}>Garden Party Formal</p>
         <p style={{ marginBottom: '10px' }}>Dress to impress!! We would love to see our family and friends in elevated, dressy attire.</p>
-        <p style={{ marginBottom: '10px' }}>Men wearing a suit or a blazer with dress pants and dress shoes, ties optional. Women in cocktail dresses, midi dresses, or tailored pantsuits. Since all events are outdoors, we also recommend opting for block heels or flats, as the celebration will take place on grass.</p>
+        <p style={{ marginBottom: '10px' }}>Men wearing a suit or a blazer with dress pants and dress shoes, ties optional. Women in cocktail or formal dresses, or tailored pantsuits. Since all events are outdoors, we also recommend opting for block heels or flats, as the celebration will take place on grass.</p>
         <p>Think of it as an opportunity to dress up—fun &amp; fancy!!</p>
       </div>
     ),

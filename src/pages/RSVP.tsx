@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbws6yp9c3g-6p-UhWqxrqJGDeY7SEn1CFYFehMR2MIvgtQJxom0OS5cPMOgc_eCdY-P/exec'
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWicRyL6BrA_a72AV-OyleRnWjq0PygH-CPP1Htb7PS1tFT58d7NyLCbTFD4Xm6aNA/exec'
 
 // ── Multi-select guest picker ────────────────────────────────
 interface MultiSelectGuestsProps {

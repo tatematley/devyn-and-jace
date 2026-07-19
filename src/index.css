@@ -1637,13 +1637,14 @@ a.schedule-event-name:hover {
 
 .registry-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(280px, 360px));
+  gap: 32px;
+  justify-content: center;
 }
 
 .registry-card {
   border: none;
-  padding: 48px 36px;
+  padding: 64px 48px;
   text-align: center;
   background: var(--light-blue);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -1675,9 +1676,9 @@ a.schedule-event-name:hover {
 
 .registry-card-name {
   font-family: var(--font-serif);
-  font-size: 26px;
+  font-size: 32px;
   color: var(--charcoal);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .registry-card-desc {

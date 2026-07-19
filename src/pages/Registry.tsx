@@ -1,15 +1,7 @@
 const registries = [
   {
-    name: 'Crate & Barrel',
-    url: 'https://www.crateandbarrel.com/gift-registry/devyn-matley-and-jace-davis/r7547893',
-  },
-  {
-    name: 'Anthropologie',
-    url: 'https://www.anthropologie.com/registry/listing?registryId=ABE13F3F9080',
-  },
-  {
-    name: 'Williams Sonoma',
-    url: '#',
+    name: 'Zola',
+    url: 'http://Zola.com/wedding/devynandjace',
   },
   {
     name: 'Our Newlywed Fund',

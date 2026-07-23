@@ -114,7 +114,7 @@ const days: Day[] = [
         time: '5 PM',
         name: 'BBQ',
         cursivePrefix: 'I Do ',
-        desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! (Casual attire) — It's a long driveway, head all the way up!",
+        desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! (Classy casual attire) — It's a long driveway, head all the way up!",
         address: '1 Entry School Rd. Waynesboro, VA 22980',
         highlight: true,
       },

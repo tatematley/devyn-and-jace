@@ -84,7 +84,7 @@ const days: Day[] = [
       'Food trucks on site',
       'Fruit picking available (pricing on their website, or pay on arrival)',
     ],
-    noteFooter: 'We\'re hoping to make it ourselves, wedding prep permitting!',
+    noteFooter: undefined,
     photo: '/images/CarterMountain.jpeg',
     events: [
       {
@@ -104,9 +104,9 @@ const days: Day[] = [
     date: 'September 18',
     events: [
       {
-        time: '2–4 PM',
+        time: '12:30–3:30 PM',
         name: 'Cyrus Ridge Farm — Visit the Miniature Highland Cows',
-        desc: 'Come meet our cuddly cows!',
+        desc: 'Come meet our cuddly cows! Come and go as you please.\n\nNote: If you want to pet and cuddle the cows (which we highly recommend!!), keep in mind you\'ll want to be wearing something you\'re okay getting dirty and to schedule time to go home to change/freshen up before the BBQ.',
         instagram: 'https://www.instagram.com/cyrusridgefarm/',
         address: '77 Singing Hill Ln, Waynesboro, VA',
       },
@@ -114,7 +114,7 @@ const days: Day[] = [
         time: '5 PM',
         name: 'BBQ',
         cursivePrefix: 'I Do ',
-        desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! (Classy casual attire) — It's a long driveway, head all the way up!",
+        desc: "Join us at Devyn's grandparents' backyard for a yummy BBQ and yard games! Dress Code: Classy Casual — It's a long driveway, head all the way up!",
         address: '1 Entry School Rd. Waynesboro, VA 22980',
         highlight: true,
       },
@@ -452,7 +452,7 @@ export default function Schedule() {
                       </div>
                     )}
                     {event.desc && (
-                      <div className="schedule-event-desc">{event.desc}</div>
+                      <div className="schedule-event-desc" style={{ whiteSpace: 'pre-line' }}>{event.desc}</div>
                     )}
                     {event.faqNote && (
                       <>

@@ -76,7 +76,7 @@ const days: Day[] = [
     scriptName: 'Thursday',
     date: 'September 17',
     optional: true,
-    note: 'For those arriving early, we would love you to join us at Carter Mountain Orchard.',
+    note: 'For those arriving early, consider making a stop at Carter Mountain Orchard!',
     noteBody: 'Carter Mountain is located between the Charlottesville airport and Waynesboro — a perfect first stop on your way in to town! No group plan here, since it\'s open to the public, but there\'s a good chance you\'ll run into fellow guests soaking up the same view. Come if you can, no pressure either way!',
     noteBullets: [
       '$10/person entrance',

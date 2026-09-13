@@ -174,6 +174,12 @@ interface Activity {
 }
 
 const activities: Activity[] = [
+  {
+    name: "Kline’s Dairy Bar",
+    desc: 'Stop by for frozen custard right here in Waynesboro',
+    url: 'https://klinesdairybar.com/waynesboro',
+    mapsQuery: "Kline's Dairy Bar, Waynesboro, VA",
+  },
   // Fruit Picking
   {
     name: 'Chiles Family Orchards — Fruit Picking',
@@ -193,12 +199,6 @@ const activities: Activity[] = [
     desc: '2.5 miles south on the Appalachian Trail — great panoramic views',
     url: 'https://www.alltrails.com/en-gb/trail/us/virginia/dripping-rock-south-via-appalachian-trail?sh=sh4ykz&utm_medium=trail_share&utm_source=alltrails_virality',
     mapsQuery: "Reed's Gap, Blue Ridge Parkway, VA",
-  },
-  {
-    name: 'Dripping Rock Hike',
-    desc: '25 min each way — short, accessible hike with a gorgeous overlook',
-    url: 'https://www.alltrails.com/en-gb/trail/us/virginia/dripping-rock-south-via-appalachian-trail',
-    mapsQuery: 'Dripping Rock Trail, Waynesboro, VA',
   },
   {
     name: 'Blackrock Summit',
@@ -227,7 +227,7 @@ const activities: Activity[] = [
   },
   {
     name: 'Sherando Lake',
-    desc: 'Beautiful mountain lake — swimming, kayaking, and relaxing. $10 cash park entrance.',
+    desc: 'Beautiful mountain lake — swimming, kayaking, and relaxing. $10 park entrance.',
     url: '#',
     mapsQuery: 'Sherando Lake Recreation Area, VA',
   },
@@ -244,10 +244,16 @@ const activities: Activity[] = [
     mapsQuery: 'Wintergreen Resort, VA',
   },
   {
-    name: 'Mt. Crawford Creamery',
-    desc: 'Fresh, locally made ice cream in the Shenandoah Valley',
-    url: 'https://maps.app.goo.gl/ZJ4fymnJETQGuwvB6?g_st=ic',
-    mapsQuery: 'Mt Crawford Creamery, VA',
+    name: 'Stonewall Jackson’s Home',
+    desc: 'Explore Stonewall Jackson’s historic home in downtown Lexington',
+    url: 'https://www.vmi.edu/museums-and-archives/stonewall-jackson-house/',
+    mapsQuery: 'Jackson House Museum, Lexington, VA',
+  },
+  {
+    name: 'Lexington Carriage Ride',
+    desc: 'Enjoy a horse-drawn carriage tour of historic Lexington. Make reservations ASAP for the carriage ride!',
+    url: 'https://www.lexcarriage.com/historical-tours.html',
+    mapsQuery: 'Lexington Carriage Company, Lexington, VA',
   },
   {
     name: 'Polo Match at King Family Vineyards',

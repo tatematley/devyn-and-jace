@@ -261,6 +261,19 @@ const activities: Activity[] = [
     url: 'https://www.kingfamilyvineyards.com/polo',
     mapsQuery: 'King Family Vineyards, Crozet, VA',
   },
+  // Wineries
+  {
+    name: 'Hazy Mountain Vineyards',
+    desc: 'Take in beautiful mountain views at this winery in Afton',
+    url: 'https://www.hazy-mountain.com/',
+    mapsQuery: 'Hazy Mountain Vineyards, Afton, VA',
+  },
+  {
+    name: 'Pippin Hill Farm & Vineyards',
+    desc: 'Wine, seasonal food, and scenic Blue Ridge views',
+    url: 'https://www.pippinhillfarm.com/visit-us/',
+    mapsQuery: 'Pippin Hill Farm & Vineyards, North Garden, VA',
+  },
   // Historic Sites
   {
     name: 'Monticello',
